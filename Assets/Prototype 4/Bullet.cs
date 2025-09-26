@@ -7,7 +7,17 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = transform.up * speed;
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(transform.up * speed);
+
+    }
+
+    void OneBecomeInvisible()
+    {
+        Destroy(gameObject);
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)

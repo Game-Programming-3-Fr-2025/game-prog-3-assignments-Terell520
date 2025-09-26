@@ -7,7 +7,7 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bulletPrefab,shootingPoint.position,transform.rotation);
         }
