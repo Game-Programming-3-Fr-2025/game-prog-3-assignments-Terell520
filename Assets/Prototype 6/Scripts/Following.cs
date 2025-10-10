@@ -8,19 +8,23 @@ public class Following : MonoBehaviour
     public int targetPoint;
     public Transform[] Points;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] Rigidbody2D rb;
     private void Start()
     {
         targetPoint = 0;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Vector2.Distance(transform.position, Points[targetPoint].position) <= 0.1)
         {
             increaseTargetInt();
         }
-        transform.position = Vector2.Lerp(transform.position, Points[targetPoint].position, followSpeed * Time.deltaTime);
+        Vector2 direction = (Points[targetPoint].position - transform.position).normalized;
+        rb.MovePosition((Vector2)transform.position + (direction * followSpeed * Time.fixedDeltaTime));
     }
     void increaseTargetInt()
     {
