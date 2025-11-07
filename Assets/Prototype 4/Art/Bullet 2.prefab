@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 1640766697706848991}
   - component: {fileID: 1700145206216047850}
   - component: {fileID: 1443778384668140014}
-  - component: {fileID: 3451244816494048489}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 09e30db6e59ed554c94e66c33379f2a1, type: 3}
-  m_Color: {r: 0.96203995, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.08614111, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,16 +152,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &3451244816494048489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2157250403840379965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c0c54ebac9fee448225deb3704f1d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
