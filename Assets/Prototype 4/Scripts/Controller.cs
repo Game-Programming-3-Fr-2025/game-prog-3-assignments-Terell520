@@ -9,8 +9,10 @@ public class Controller : MonoBehaviour
     private float moveSpeed = 7f;
     private float speedX, speedY, speedZ;
     public InputAction PlayControls;
+    public BallModified modified;
 
     Vector2 moveDirection = Vector2.zero;
+    private bool isDead = false;
 
     private void OnEnable()
     {
@@ -32,14 +34,27 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        //speedY = Input.GetAxisRaw("veritical") * moveSpeed;
-        //rb.linearVelocity = new Vector2(speedX, speedY);
         moveDirection = PlayControls.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    private void rein ()
+    {
+        isDead = true;
+        if (modified != null)
+            modified.OnPlayerDeath(); //calls shooting type
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            rein();
+        }
     }
 }
