@@ -9,7 +9,12 @@ public class Controller : MonoBehaviour
     private float moveSpeed = 7f;
     private float speedX, speedY, speedZ;
     public InputAction PlayControls;
+<<<<<<< HEAD
     public BallModified modified;
+=======
+    private bool isDead;
+    private ModifiedBullet bullet;
+>>>>>>> 078b1e342ce1e12b0ce26d6bdcd7806c211f5f4e
 
     Vector2 moveDirection = Vector2.zero;
     private bool isDead = false;
@@ -42,6 +47,7 @@ public class Controller : MonoBehaviour
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
+<<<<<<< HEAD
     private void rein ()
     {
         isDead = true;
@@ -53,8 +59,23 @@ public class Controller : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
+=======
+    public void rein()
+    {
+        isDead = true;
+        if (bullet != null)
+            bullet.OnPlayerDeath();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!isDead && collision.gameObject.CompareTag("Enemy"))
+>>>>>>> 078b1e342ce1e12b0ce26d6bdcd7806c211f5f4e
         {
             rein();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 078b1e342ce1e12b0ce26d6bdcd7806c211f5f4e
