@@ -7,6 +7,7 @@ public class BallModified : MonoBehaviour
 
     void Start()
     {
+        if (rb == null)
         rb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
