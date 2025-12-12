@@ -3,8 +3,13 @@ using UnityEngine;
 public class BallModified : MonoBehaviour
 {
     private float speed = 150;
-    private Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
+    private int appliedDamage = 1;
 
+    private void Update()
+    {
+        
+    }
     void Start()
     {
         if (rb == null)
@@ -15,8 +20,24 @@ public class BallModified : MonoBehaviour
     {
         rb.AddForce(transform.up * speed);
     }
-    void OneBecomeInvisible()
+    void OnBecomeInvisible()
     {
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemyHp = collision.gameObject.GetComponent<Enemy>();
+
+            if (enemyHp != null)
+            {
+                enemyHp.TakeDamage(appliedDamage);
+                Debug.Log("Enemy got damaged.");
+            }
+            Destroy(gameObject);
+
+        }
     }
 }

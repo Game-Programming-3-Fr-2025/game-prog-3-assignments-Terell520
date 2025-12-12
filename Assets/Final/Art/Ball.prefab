@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9030284391457264641}
   - component: {fileID: 7648522560983351754}
   - component: {fileID: 3627769903010924375}
+  - component: {fileID: 4787578940421733751}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -147,7 +148,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -166,3 +167,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  rb: {fileID: 9030284391457264641}
+--- !u!114 &4787578940421733751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358229062555819347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f8b82d2c4710c45b4ae32af930fe97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modified: {fileID: 8271546385201381285, guid: 1ab9b2da222f8834e9691701781af476, type: 3}
+  twoshot: {fileID: 3840891765482233661, guid: 0adebaeaa3d3c9f40beed2961414069b, type: 3}
+  threeshot: {fileID: -2230408738420534197, guid: 8a2de1b5580afb24487b8aabf60dcec4, type: 3}

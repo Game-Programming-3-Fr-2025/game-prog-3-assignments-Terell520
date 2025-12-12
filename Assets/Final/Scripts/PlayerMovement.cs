@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     //private ModifiedBullet bullet;
     private Vector2 moveDirection = Vector2.zero;
     //private bool isDead = false;
+    public GameManager gameManager;
 
     private void OnEnable()
     {
@@ -37,5 +38,24 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        Health -= amount;
+        if (Health <= 0)
+        {
+            if (gameManager != null)
+            {
+                gameManager.PlayerDied();
+                Debug.Log("Player has reincarnated");
+            }
+            else
+            {
+                Debug.LogWarning("No GameManager found - destroy player as fallback.");
+                Destroy(gameObject);
+            }
+            
+        }
     }
 }
