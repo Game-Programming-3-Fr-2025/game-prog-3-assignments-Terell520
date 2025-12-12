@@ -12,14 +12,18 @@ GameObject:
   - component: {fileID: 4574817188511584135}
   - component: {fileID: 9030284391457264641}
   - component: {fileID: 7648522560983351754}
+<<<<<<< Updated upstream
   - component: {fileID: 1155948386632163010}
+=======
+  - component: {fileID: -7008841099101277931}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Ball 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5207723329641900670
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +157,11 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+<<<<<<< Updated upstream
 --- !u!114 &1155948386632163010
+=======
+--- !u!114 &-7008841099101277931
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +170,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2358229062555819347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ea036af6995014ab271e61dc155e1b, type: 3}
+  m_Script: {fileID: 11500000, guid: a1ff19b9ff2de5a4c9037c64c2311fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
+=======
+  speed: 100
+  rb: {fileID: 9030284391457264641}
+>>>>>>> Stashed changes

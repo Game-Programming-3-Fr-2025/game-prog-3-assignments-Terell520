@@ -8,18 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prototype 4/Art/Bullet 2.prefab
   - component: {fileID: 3453439851932083371}
   - component: {fileID: 1640766697706848991}
   - component: {fileID: 1700145206216047850}
   - component: {fileID: 1443778384668140014}
+=======
+  - component: {fileID: 3620788644792166803}
+  - component: {fileID: 6541915989648789375}
+  - component: {fileID: -2230408738420534197}
+  - component: {fileID: -101923856511552763}
+  - component: {fileID: 6617906364524411671}
+>>>>>>> Stashed changes:Assets/Final/Art/Ball 4 .prefab
   m_Layer: 0
   m_Name: Bullet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream:Assets/Prototype 4/Art/Bullet 2.prefab
   m_IsActive: 1
 --- !u!4 &3453439851932083371
+=======
+  m_IsActive: 0
+--- !u!4 &3620788644792166803
+>>>>>>> Stashed changes:Assets/Final/Art/Ball 4 .prefab
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,8 +137,53 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2157250403840379965}
   m_Enabled: 1
+<<<<<<< Updated upstream:Assets/Prototype 4/Art/Bullet 2.prefab
   serializedVersion: 3
   m_Density: 0
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d894b26177cce8049b3e884df385a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -101923856511552763}
+--- !u!50 &-101923856511552763
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096356990114844013}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &6617906364524411671
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096356990114844013}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+>>>>>>> Stashed changes:Assets/Final/Art/Ball 4 .prefab
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -146,7 +204,11 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< Updated upstream:Assets/Prototype 4/Art/Bullet 2.prefab
   m_IsTrigger: 1
+=======
+  m_IsTrigger: 0
+>>>>>>> Stashed changes:Assets/Final/Art/Ball 4 .prefab
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

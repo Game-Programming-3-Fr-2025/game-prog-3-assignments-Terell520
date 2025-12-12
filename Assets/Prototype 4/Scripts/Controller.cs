@@ -9,7 +9,14 @@ public class Controller : MonoBehaviour
     private float moveSpeed = 7f;
     private float speedX, speedY, speedZ;
     public InputAction PlayControls;
+<<<<<<< Updated upstream
     public BallModified modified;
+=======
+    private bool isDead;
+    //private ModifiedBullet bullet;
+    private Vector2 moveDirection = Vector2.zero;
+    //private bool isDead = false;
+>>>>>>> Stashed changes
 
     Vector2 moveDirection = Vector2.zero;
     private bool isDead = false;
@@ -37,6 +44,7 @@ public class Controller : MonoBehaviour
         moveDirection = PlayControls.ReadValue<Vector2>();
     }
 
+<<<<<<< Updated upstream
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
@@ -49,12 +57,15 @@ public class Controller : MonoBehaviour
             modified.OnPlayerDeath(); //calls shooting type
         
     }
+=======
+
+>>>>>>> Stashed changes
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            rein();
+            
         }
     }
 }

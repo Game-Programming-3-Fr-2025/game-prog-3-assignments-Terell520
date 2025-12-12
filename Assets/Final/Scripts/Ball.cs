@@ -20,4 +20,23 @@ public class Ball : MonoBehaviour
     {
         Destroy(gameObject);
     }
+<<<<<<< Updated upstream
+=======
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemyHp = collision.gameObject.GetComponent<Enemy>();
+
+            if (enemyHp != null)
+            {
+               
+                Debug.Log("Enemy got damaged.");
+            }
+            Destroy(gameObject);
+
+        }
+    }
+>>>>>>> Stashed changes
 }
